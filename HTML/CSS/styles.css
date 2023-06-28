@@ -1,8 +1,13 @@
+
+html{height: 100%;}
 body {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	text-align: center;
+	height: 100%;
+
+
 
 }
+*{	box-sizing: border-box;}
 h1 {
 	color:blue;
 	display: flex;
@@ -12,17 +17,22 @@ h1 {
 }
 
 .menu {
-	display:block;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
 
+	border-style: solid;
+	float: left;
+	width: 100%;
+	height: 10%;
+
+}
+.product{
+	float: left;
+	border-style: solid;
+	width: 33%;
+	height: 100%;
 }
 .button {
 	background-color: #007bff;
-	width: 30%;
 	color: #fff;
-	padding: 1rem 2rem;
 	border-radius: 0.25rem;
 	cursor: pointer;
 	border:none;
@@ -33,7 +43,7 @@ h1 {
 }
 
 .button:hover {
-	background-color: #0069d9;
+	background-color: #5e7ea1;
 }
 header{
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
