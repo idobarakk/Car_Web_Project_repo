@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Car Management App</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+	<header>
+		<h1>רכבים סטורנקסט</h1>
+		<p id="intro">ברוכים הבאים למערכת ניהול הרכבים של חברת סטורנקסט</p>
+	</header>
+
+	<nav class="menu">
+		<button class="button" id="btn-check"onclick="window.location.href = 'checkCar.html';"><img src="icons/searchCar.png" alt="בדיקת רכב" class="icon"><br>בדיקת רכב</button>
+		<button class="button" id="btn-add" onclick="window.location.href = 'addCar.html';"><img src="icons/addCar.png" alt="הוספת רכב" class="icon"><br>הוספת רכב</button>
+		<button class="button" id="btn-delete" onclick="window.location.href = 'removeCar.html';"><img src="icons/removeCar.png" alt="מחיקת רכב" class="icon"><br>מחיקת רכב</button>
+		<div id="cardiv"><img src="icons/car.png" alt="car" id="movingcar"></div>
+		
+	</nav>
+	<footer>
+		<h4 id="rights">כל הזכויות שמורות לתומר זולחיאן, זיו מסד ועידו ברק  </h4>
+	</footer>
+
+	<script src="carApp.js"></script>
+</body>
+</html>

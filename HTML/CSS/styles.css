@@ -1,71 +1,138 @@
+*{box-sizing: border-box;}
 
-body {
+body,html  {
     height: 100%;
-    font-family: Arial, sans-serif;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    /* background-color: blue; */
-    background-image: url("storenext.png");
-	background-size: 40%; 
-    background-repeat: no-repeat;
-    background-position: center;
-	background-position-y: -10%;
-	
-
-    
+     background-color: rgb(158, 158, 241); 
+    background-color: rgb(176, 223, 237); 
+}
+/*header + title =Intro*/
+header{
+float: right;
+height: 15%;
+width: 100%;
 }
 
 h1 {
+    font-size: 50px;
+    width: 100%;
+    height: 100%;
+    float: right;
     text-align: center;
-    color: black;
+    margin: 0;
+    color: rgb(75, 34, 34);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-	margin-top: 2%;
 }
 
-main {
-	height: 90%;
-      
+#intro{
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
 }
-.divbutton{
-	
-	width: 33%;
-	height: 100%;
-	margin: auto;
+
+
+/*NavBar For HomePage*/
+nav{
+    height: 75%;
+    width: 100%;
+    float: right;
 }
+/*NavBar buttons + icon*/
 .button {
-	width: 100%;
-    padding: 5% 9%;
-    margin: auto;
+    float: right;
+	width: 30%;
+    padding: 1%;
+    margin-right: 6%;
 	margin-top: 10%;
-    background-color: black;
+    background-color: rgb(100, 48, 174);
     color: #fff;
+    font-size: 17px;
     border: none;
-    border-radius: 4px;
+    border-radius: 14px;
     cursor: pointer;
-}
-
-.exit-button {
-	display: block;
-	width: 100%;
-	height: 100%;
-	margin: auto;
-	margin-top: 10%;
-    background-color: #f44336;
-	border-radius: 4px;
-	padding: 5% 9%;
 }
 
 .button:hover, .exit-button:hover {
     opacity: 0.8;
+    background-color: rgb(166, 93, 233)8, 174;
 }
 
+.icon{
+    float: right;
+    height: 15%;
+    width: 15%;
+}
 
+/*back button div and button*/
+#backdiv{
+    float: right;
+    width: 100%;
+}
+#btn-back{
+    margin-right:35%;
+    background-color: rgb(238, 47, 47);
+}
+
+footer{
+    float: right;
+    height: 10%;
+    width: 100%;
+
+}
+
+#rights{
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+}
+
+/*animation*/
+#cardiv{
+    float: right;
+    width: 100%;
+}
+#movingcar{
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin-left: 0%;
+    animation-name: caranimation;
+    animation-duration: 14s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;  
+}
+
+@keyframes caranimation {
+    0%   {margin-left: 0%;}
+    100% {margin-left: 100%;}
+  }
+
+/*wild screen*/
+  @media (min-width: 600px) {
+    .button {
+        width: 25%;
+    }
+}
+
+/*phone*/
 @media (max-width: 600px) {
-    .menu {
-        flex-direction: column;
+    header{
+        height: 7%;
     }
 
-    .button, .exit-button {
-        margin-bottom: 10px;
+    h1{
+        font-size: 30px;
     }
+    #intro{
+        font-size: medium;
+    }
+    .button {
+        width: 60%;
+        margin-right: 20%;
+    }
+    #movingcar{animation-duration: 6s;}
+
 }
