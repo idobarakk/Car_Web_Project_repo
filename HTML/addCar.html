@@ -8,20 +8,65 @@
 </head>
 <body>
 	<header>
-		<h1>הוספת רכב</h1>
-		<p id="intro">מלאו את פרטי הרכב אותו תרצו להוסיף</p>
+		<h1>Add Car</h1>
+		<p id="intro">fill the car details you want to add to the company list</p>
 	</header>
+	<main >
+			
+			<form action="carAdd.php" method="post" >
+				<div>
+				<!-- <div class="addcarform"> -->
+				<label class="lbl" for="first_name" >first name-</label>
+				<input class="lbl" type="text" id="first_name" name="first_name" required>
+
+				<label class="lbl" for="last_name" >last_name-</label>
+				<input class="lbl" type="text" id="last_name" name="last_name" required>
+
+				<label class="lbl" for="worker_num" >worker namber-</label>
+				<input class="lbl" type="text" id="worker_num" name="worker_num" required>
+
+				<label class="lbl" for="phone" >phone nember-</label>
+				<input class="lbl" type="text" id="phone" name="phone" required>
+			</div>
+			<div>
+
+				<label class="lbl" for="license_num" >lisence number-</label>
+				<input class="lbl" type="text" id="license_num" name="license_num" required >
+
+				<label class="lbl" for="car_Company" >car company-</label>
+				<input class="lbl" type="text" id="car_Company" name="car_Company" required>
+
+				<label class="lbl" for="car_model" >car model-</label>
+				<input class="lbl" type="text" id="car_model" name="car_model" required>
+
+				<label class="lbl" for="car_color" >car color-</label>
+				<input class="lbl" type="text" id="car_color" name="car_color" required>
+			
+			</div>
+
+
+
+			<div id="backdiv">
+				<button class="button" type="submit" id="btn-submit"><br>Add</button>
+			</div>
+
+				
+
+
+			</form>
+
 
 	<nav class="menu">
 		<div id="backdiv">
-		<button class="button" id="btn-back" onclick="window.location.href = 'HomePage.html';"><br>חזור</button>
+		<button class="button" id="btn-back" onclick="window.location.href = 'HomePage.html';"><br>Back</button>
 		</div>
 
 	</nav>
+	</main>
 	<footer>
 		<h4 id="rights">כל הזכויות שמורות לתומר זולחיאן, זיו מסד ועידו ברק  </h4>
 	</footer>
 
-	<script src="carApp.js"></script>
+	<!-- <script src="carApp.js"></script> -->
 </body>
 </html>
