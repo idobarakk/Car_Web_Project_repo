@@ -8,19 +8,27 @@
 </head>
 <body>
 	<header>
-		<h1>הסרת רכב</h1>
-		<p id="intro">מלאו את פרטי הרכב אותו תרצו להסיר</p>
+		<h1>Remove Car</h1>
 	</header>
 
-	<nav class="menu">
-		<div id="backdiv">
-		<button class="button" id="btn-back" onclick="window.location.href = 'index.html';"><br>חזור</button>
+	<main>
+		<form id="removeForm" method="post" action="removeCar.php">
+		<div id="inputCarNumDiv">
+			<label for="carNumToRemove"> Enter Car number to Remove:  </label>
+			<input type="text" id="carNumToRemove" name="carNumToRemove" required>
 		</div>
+		<div id="CarFoundDiv">
+			<p class="messageCarFound" hidden>Car was found and removed</p>	
+		</div>
+		<div id="CarNotFoundDiv">
+			<p class="messageCarNotFound" hidden>Car not found</p>	
+		</div>
+		<input type="submit" class="button" value="Remove Car" id="remove_btn_submit" >
+		</form>
 
-	</nav>
-	<footer>
-		<h4 id="rights">כל הזכויות שמורות לתומר זולחיאן, זיו מסד ועידו ברק  </h4>
-	</footer>
+		<button class="button back" onclick="window.location.href = 'index.html';">Back</button>
+	</main>
+
 
 	<script src="carApp.js"></script>
 </body>
