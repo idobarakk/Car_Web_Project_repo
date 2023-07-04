@@ -40,6 +40,17 @@ h1 {
     font-size: 30px;
 }
 
+#carDiv{
+    display: grid;
+    place-items: center;
+}
+#workerDiv{
+    display: grid;
+    place-items: center;
+}
+#introAdd{
+    text-align: center;  
+}
 
 /*NavBar For HomePage*/
 nav{
@@ -83,20 +94,22 @@ nav{
 }
 #remove_btn_submit{
     background-color: rgb(238, 47, 47);
-    margin-left :35%;
+    margin-left:37%;
 }
 #btn-back{
+    margin-top: 1%;
     float: left;
-    margin-left:35%;
+    margin-left:37%;
     background-color: rgb(238, 47, 47);
 
 }
 #btn-submit{
-    
         float: left;
-        margin-left:35%;
+        margin-left: 37%;
+        margin-right: 0;
+        margin-top: 0;
         background-color: rgb(7, 228, 81);
-        margin-top: 10%;
+
     
 }
 
@@ -129,7 +142,11 @@ footer{
     animation-fill-mode: forwards;  
 }
 .back{
-    margin-left: 35%;
+
+    float: left;
+    margin-left: 37%;
+    margin-right: 0;
+    margin-top: 1%;
 }
 
 #removeForm{
@@ -147,8 +164,9 @@ footer{
 
 
 #inputCarNumDiv{
-margin-top: 5%;
-margin-left: 30%;
+    margin-top: 5%;
+    display: grid;
+    place-items: center;
 }
 
 .messageCarFound{

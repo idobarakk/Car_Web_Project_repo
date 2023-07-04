@@ -9,49 +9,50 @@
 <body>
 	<header>
 		<h1>Add Car</h1>
-		<p id="intro">fill the car details you want to add to the company list</p>
+
 	</header>
 	<main >
-			
+		<p id="introAdd">fill the car details you want to add to the company list</p>
 			<form action="carAdd.php" method="post" id="AddCarForm" >
-				<div>
+				<div id="workerDiv">
 				
-				<label  for="first_name" >first name-</label>
+				<label  for="first_name" >First name </label>
 				<input  type="text" id="first_name" name="first_name" required>
-				<p id="first_name_error" ></p>
-
-				<label  for="last_name" >last_name-</label>
+				<p id="first_name_error"></p>
+					
+				<label  for="last_name" >Last_name </label>
 				<input  type="text" id="last_name" name="last_name" required>
 				<p id="last_name_error" ></p>
 
-				<label  for="worker_num" >worker namber-</label>
+				<label  for="worker_num" >Worker namber-</label>
 				<input  type="text" id="worker_num" name="worker_num" maxlength="5" required>
+				<p id="worker_num_error" ></p>
 
-				<label  for="phone" >phone number-</label>
+				<label  for="phone" >Phone Number-</label>
 				<input  type="tel" id="phone" name="phone" required>
 				<p id="phone_error"></p>
 			</div>
-			<div>
+			<div id="carDiv">
 
-				<label  for="license_num" >lisence number-</label>
+				<label  for="license_num" >Lisence number-</label>
 				<input  type="text" id="license_num" name="license_num" required >
+				<p id="license_num_error"></p>
 
-				<label  for="car_Company" >car company-</label>
+				<label  for="car_Company" >Car company-</label>
 				<input  type="text" id="car_Company" name="car_Company" required>
+				<p id="car_Company_error"></p>
 
-				<label  for="car_model" >car model-</label>
+				<label  for="car_model" >Car model-</label>
 				<input  type="text" id="car_model" name="car_model" required>
+				<p id="car_model_error"></p>
 
-				<label  for="car_color" >car color-</label>
+				<label  for="car_color" >Car color-</label>
 				<input  type="text" id="car_color" name="car_color" required>
+				<p id="car_color_error"></p>
 			
 			</div>
 
-
-
-			<div id="backdiv">
-				<button class="button" type="submit" id="btn-submit"><br>Add</button>
-			</div>
+			<button class="button" type="submit" id="btn-submit"><br>Add</button>
 
 				
 
@@ -61,14 +62,12 @@
 
 	<nav class="menu">
 		<div id="backdiv">
-		<button class="button" id="btn-back" onclick="window.location.href = 'index.html';"><br>Back</button>
+		<button class="button back" id="btn-back" onclick="window.location.href = 'index.html';"><br>Back</button>
 		</div>
 
 	</nav>
 	</main>
-	<footer>
-		<h4 id="rights">כל הזכויות שמורות לתומר זולחיאן, זיו מסד ועידו ברק  </h4>
-	</footer>
+
 
 	<script src="carApp.js"></script>
 </body>
