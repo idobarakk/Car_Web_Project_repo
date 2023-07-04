@@ -30,4 +30,3 @@ echo "the data was submitted"
 
 
 
-?>
