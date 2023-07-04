@@ -141,6 +141,11 @@ footer{
     animation-timing-function: linear;
     animation-fill-mode: forwards;  
 }
+.center{float: left;
+    text-align: center;
+    margin-top: 5%;
+    width: 100%;
+}
 .back{
 
     float: left;
