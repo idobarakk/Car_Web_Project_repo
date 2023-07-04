@@ -14,9 +14,11 @@ $CheckNum=$_POST['CheckNum'];
 $sql="SELECT * WHERE 'license_num'='$CheckNum'";
 $result = $conn->query($sql);
 
-if ($result==false){
-  echo "can not submit the data. Error is: ".$conn->error;
+if ($result->num_rows > 0) {
+ 
+    echo "Exist";
+} else {
+  echo "0 results";
 }
-else
-echo "the data was submitted"
+$conn->close();
 ?>
