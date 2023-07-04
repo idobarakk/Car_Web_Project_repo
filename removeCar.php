@@ -12,14 +12,14 @@ $carNumToRemove=$_POST['carNumToRemove'];
 
 
 
-$sql="DELETE FROM Cars WHERE license_num=:carNumToRemove;";
+$sql="DELETE FROM `Cars` WHERE `license_num`='$carNumToRemove'";
 
 if ($conn->query($sql)==false){
     echo "can not submit the data. Error is: ".$conn->error;
 }
 else
 echo "the data was submitted"
-?>
+
 
 
 
