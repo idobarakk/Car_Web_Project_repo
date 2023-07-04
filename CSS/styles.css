@@ -185,6 +185,11 @@ footer{
     color: rgb(94, 10, 10);
     font-weight: bold;
 }
+.error {
+    font-size: 12px;
+    color: red;
+    margin-top: 5px;
+  }
 
 @keyframes caranimation {
     0%   {margin-left: 0%;}
