@@ -8,20 +8,17 @@ $conn = new mysqli($host,$user,$pass,$db);
 if ($conn->connect_error){
     die("connection failed:".$conn->connect_error);
 }
-$carNumToRemove=$_POST['carNumToRemove'];
+$CheckNum=$_POST['CheckNum'];
 
 
+$sql="SELECT * WHERE 'license_num'='$CheckNum'";
+$result = $conn->query($sql);
 
-$sql="DELETE FROM `Cars` WHERE `license_num`='$carNumToRemove'";
-
-if ($conn->query($sql)==false){
-    echo "can not submit the data. Error is: ".$conn->error;
+if ($result->num_rows > 0) {
+ 
+    echo "Exist";
+} else {
+  echo "0 results";
 }
-else
-echo "the data was submitted"
-
-
-
-
-
+$conn->close();
 ?>
