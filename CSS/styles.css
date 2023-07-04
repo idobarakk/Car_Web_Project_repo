@@ -201,7 +201,7 @@ footer{
 /*phone*/
 @media (max-width: 600px) {
     header{
-        height: 7%;
+        height: 10%;
     }
 
     h1{
@@ -214,7 +214,14 @@ footer{
         width: 60%;
         margin-right: 20%;
     }
+    .marginLeft{margin-left: 20%;}
     #btn-submit{margin-left:20%;}
+    #btn-back{margin-left:20%;}
+    #btn-check{margin-left:20%;}
+    #btn-add{margin-left:20%;}
+    #btn-delete{margin-left:20%;}
+    #remove_btn_submit{margin-left:20%;}
+    #mainMenu{margin-top: 3%;}
     #movingcar{animation-duration: 6s;}
 
 }
