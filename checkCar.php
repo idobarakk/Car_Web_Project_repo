@@ -11,14 +11,15 @@ if ($conn->connect_error){
 $CheckNum=$_POST['CheckNum'];
 
 
-$sql="SELECT * WHERE 'license_num'='$CheckNum'";
-$result = $conn->query($sql);
+$sql="SELECT count(*) FROM 'Cars' WHERE 'license_num'='$CheckNum'";
 
-if ($result->num_rows > 0) {
- 
-    echo "Exist";
+$result = $conn->query($sql);
+echo $result;
+if ($result > 0) {
+
+  print "Exist";
 } else {
-  echo "0 results";
+    print "NotExist";  
 }
 $conn->close();
 ?>
