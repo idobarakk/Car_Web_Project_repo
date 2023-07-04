@@ -15,19 +15,21 @@
 			
 			<form action="carAdd.php" method="post" id="AddCarForm" >
 				<div>
-				<!-- <div class="addcarform"> -->
+				
 				<label  for="first_name" >first name-</label>
 				<input  type="text" id="first_name" name="first_name" required>
-				
+				<p id="first_name_error" ></p>
 
 				<label  for="last_name" >last_name-</label>
 				<input  type="text" id="last_name" name="last_name" required>
+				<p id="last_name_error" ></p>
 
 				<label  for="worker_num" >worker namber-</label>
-				<input  type="text" id="worker_num" name="worker_num" required>
+				<input  type="text" id="worker_num" name="worker_num" maxlength="5" required>
 
-				<label  for="phone" >phone nember-</label>
-				<input  type="text" id="phone" name="phone" required>
+				<label  for="phone" >phone number-</label>
+				<input  type="tel" id="phone" name="phone" required>
+				<p id="phone_error"></p>
 			</div>
 			<div>
 
