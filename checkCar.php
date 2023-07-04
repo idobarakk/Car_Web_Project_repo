@@ -14,14 +14,16 @@ $carNumToRemove=$_POST['carNumToRemove'];
 
 $sql="DELETE FROM `Cars` WHERE `license_num`='$carNumToRemove'";
 
-if ($conn->query($sql)==false){
-    echo "can not submit the data. Error is: ".$conn->error;
-}
-else
-echo "the data was submitted"
-
-
-
-
-
-?>
+if ($result->num_rows > 0) {
+    echo "<table><tr><th>Worker Num</th><th>first Name</th><th></th></tr>";
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+      echo "<tr><td>" . $row["id"]. "</td><td>" . $row["firstname"]. " " . $row["lastname"]. "</td></tr>";
+    }
+    echo "</table>";
+  } else {
+    echo "0 results";
+  }
+  
+  $conn->close();
+  ?>
