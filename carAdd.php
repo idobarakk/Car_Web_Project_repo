@@ -18,7 +18,7 @@ $worker_last_name=$_POST['last_name'];
 $worker_Phone=$_POST['phone'];
 
 
-$sql="INSERT INTO `Cars` (`worker_num`, `car_company`, `car_model`, `car_color`, `first_name`, `last_name`, `Phone_num`,`license_num`) VALUES ('".$worker_num."', '".$car_company."', '".$car_model."', '".$car_color."','".$worker_first_name."','".$worker_last_name."','".$worker_Phone."','".$license_num."' )";
+$sql="INSERT INTO `Cars` (`worker_num`, `car_company`, `car_model`, `car_color`, `first_name`, `last_name`, `phone`,`license_num`) VALUES ('".$worker_num."', '".$car_company."', '".$car_model."', '".$car_color."','".$worker_first_name."','".$worker_last_name."','".$worker_Phone."','".$license_num."' )";
 
 if ($conn->query($sql)==false){
     echo "can not submit the data. Error is: ".$conn->error;
