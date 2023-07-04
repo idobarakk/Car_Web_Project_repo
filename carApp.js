@@ -3,70 +3,74 @@ const btnAdd = document.getElementById('btn-add');
 const btnDelete = document.getElementById('btn-delete');
 const btnExit = document.getElementById('btn-exit');
 
-// btnCheck.addEventListener('click', () => {
-	
-// });
-
-// btnAdd.addEventListener('click', () => {
-	
-// });
-
-// btnDelete.addEventListener('click', () => {
-	
-// });
-
-// btnExit.addEventListener('click', () => {
-	
-// });
-
 document.getElementById("btn-submit").addEventListener("click",function(event){
-
+	let flag=true
     let first_name=document.getElementById("first_name").value;
     let pattern=/^[A-Za-z]+$/;
     if(pattern.test(first_name)==false){
         event.preventDefault();
-        document.getElementById("first_name_error").innerHTML="letters has to be only in english"
-
+		document.getElementById("first_name").value = "";
+        document.getElementById("first_name_error").innerHTML="please enter only letters in english"
+		flag=false
     }
     let last_name=document.getElementById("last_name").value;
     if(pattern.test(last_name)==false){
         event.preventDefault();
-        document.getElementById("last_name_error").innerHTML="letters has to be only in english";
+		document.getElementById("last_name").value = "";
+        document.getElementById("last_name_error").innerHTML="please enter only letters in english";
+		flag=false
     }
+    let worker_number = document.getElementById("worker_num").value;
+    let worker_number_pattern = /^\d{1,6}$/; // Assumes a 1-6-digit worker number
 
+    if (worker_number_pattern.test(worker_number)==false) {
+        event.preventDefault();
+		document.getElementById("worker_num").value = "";
+        document.getElementById("worker_num_error").innerHTML = "Please enter a valid 6-digit worker number";
+		flag=false
+    }
     
     let phone = document.getElementById("phone").value;
     let phone_pattern = /^\d{10}$/; // Assumes a 10-digit phone number
 
     if (phone_pattern.test(phone)==false) {
         event.preventDefault();
+		document.getElementById("phone").value = "";
         document.getElementById("phone_error").innerHTML = "Please enter a valid 10-digit phone number";
+		flag=false
     }
+	let license_plate = document.getElementById("license_num").value;
+    let plate_pattern = /^\d{6,8}$/; // Assumes a 6-8-digit license_plate number
+
+    if (plate_pattern.test(license_plate)==false) {
+        event.preventDefault();
+		document.getElementById("license_num").value = "";
+        document.getElementById("license_num_error").innerHTML = "Please enter a valid 6-8-digit license plate number";
+		flag=false
+    }
+	let Car_Company=document.getElementById("car_Company").value;
+    if(pattern.test(Car_Company)==false){
+        event.preventDefault();
+		document.getElementById("car_Company").value = "";
+        document.getElementById("car_Company_error").innerHTML="please enter only letters in english";
+		flag=false
+    }
+	let Car_Model=document.getElementById("car_model").value;
+    if(pattern.test(Car_Model)==false){
+        event.preventDefault();
+		document.getElementById("car_model").value = "";
+        document.getElementById("car_model_error").innerHTML="please enter only letters in english";
+		flag=false
+    }
+	let Car_Color=document.getElementById("car_color").value;
+    if(pattern.test(Car_Color)==false){
+        event.preventDefault();
+		document.getElementById("car_color").value = "";
+        document.getElementById("car_color_error").innerHTML="please enter only letters in english";
+		flag=false
+    }
+	if(flag==True){
+		alert("the car was add sucssesfuly!");
+		Location.reload();
+	}
 });
-
-
-
-
-// }
-
-		// // Add event listener to the form submission
-		// document.getElementById("AddCarForm").addEventListener("submit", function(event) {
-		// 	// Clear previous error message
-		// 	document.getElementById("first_name_error").textContent = "";
-
-		// 	// Get the value of the first name input field
-		// 	var firstName = document.getElementById("first_name").value;
-
-		// 	// Regular expression to match English letters only
-		// 	var englishLettersRegex = /^[A-Za-z]+$/;
-
-		// 	// Check if the first name contains only English letters
-		// 	if (!englishLettersRegex.test(firstName)) {
-		// 		// Display error message
-		// 		document.getElementById("first_name_error").textContent = "Please enter only English letters";
-		// 		// Clear the first name input field
-		// 		document.getElementById("first_name").value = "";
-		// 		// Prevent form submission
-		// 		event.preventDefault();
-		// 	}
-		// });
