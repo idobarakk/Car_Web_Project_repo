@@ -76,8 +76,11 @@ document.getElementById("btn-submit").addEventListener("click",function(event){
     }
 	if(flag==True){
 		alert("the car was add sucssesfuly!");
-		Location.reload();
+        localStorage.setItem("addedCar", addedCar);
+        window.location.href = "checkCar.html";
+        document.getElementById("CheckNum").value = localStorage.getItem("addedCar");
 	}
+
 
 });
 
@@ -148,5 +151,5 @@ document.getElementById("car_color").addEventListener("mouseout", function(event
       
       if (confirmation) {
         window.location.href = 'index.html';
-      }
-    });
+}
+});
