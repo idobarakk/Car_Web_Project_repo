@@ -3,6 +3,9 @@ const btnAdd = document.getElementById('btn-add');
 const btnDelete = document.getElementById('btn-delete');
 const btnExit = document.getElementById('btn-exit');
 
+
+
+
 document.getElementById("btn-submit").addEventListener("click",function(event){
 	let flag=true
     let first_name=document.getElementById("first_name").value;
@@ -41,6 +44,8 @@ document.getElementById("btn-submit").addEventListener("click",function(event){
     }
 	let license_plate = document.getElementById("license_num").value;
     let plate_pattern = /^\d{6,8}$/; // Assumes a 6-8-digit license_plate number
+   
+
 
     if (plate_pattern.test(license_plate)==false) {
         event.preventDefault();
@@ -73,4 +78,75 @@ document.getElementById("btn-submit").addEventListener("click",function(event){
 		alert("the car was add sucssesfuly!");
 		Location.reload();
 	}
+
 });
+
+document.getElementById("first_name").addEventListener("mouseover", function(event) {
+    document.getElementById("first_name").style.backgroundColor = "lightgreen";
+});
+
+document.getElementById("first_name").addEventListener("mouseout", function(event) {
+    document.getElementById("first_name").style.backgroundColor = "white";
+});
+
+document.getElementById("last_name").addEventListener("mouseover", function(event) {
+    document.getElementById("last_name").style.backgroundColor = "lightgreen";
+});
+
+document.getElementById("last_name").addEventListener("mouseout", function(event) {
+    document.getElementById("last_name").style.backgroundColor = "white";
+});
+
+document.getElementById("worker_num").addEventListener("mouseover", function(event) {
+    document.getElementById("worker_num").style.backgroundColor = "lightgreen";
+});
+
+document.getElementById("worker_num").addEventListener("mouseout", function(event) {
+    document.getElementById("worker_num").style.backgroundColor = "white";
+});
+
+document.getElementById("phone").addEventListener("mouseover", function(event) {
+    document.getElementById("phone").style.backgroundColor = "lightgreen";
+});
+
+document.getElementById("phone").addEventListener("mouseout", function(event) {
+    document.getElementById("phone").style.backgroundColor = "white";
+});
+
+document.getElementById("license_num").addEventListener("mouseover", function(event) {
+    document.getElementById("license_num").style.backgroundColor = "lightgreen";
+});
+
+document.getElementById("license_num").addEventListener("mouseout", function(event) {
+    document.getElementById("license_num").style.backgroundColor = "white";
+});
+document.getElementById("car_Company").addEventListener("mouseover", function(event) {
+    document.getElementById("car_Company").style.backgroundColor = "lightgreen";
+});
+
+document.getElementById("car_Company").addEventListener("mouseout", function(event) {
+    document.getElementById("car_Company").style.backgroundColor = "white";
+});
+document.getElementById("car_model").addEventListener("mouseover", function(event) {
+    document.getElementById("car_model").style.backgroundColor = "lightgreen";
+});
+
+document.getElementById("car_model").addEventListener("mouseout", function(event) {
+    document.getElementById("car_model").style.backgroundColor = "white";
+});
+document.getElementById("car_color").addEventListener("mouseover", function(event) {
+    document.getElementById("car_color").style.backgroundColor = "lightgreen";
+});
+
+document.getElementById("car_color").addEventListener("mouseout", function(event) {
+    document.getElementById("car_color").style.backgroundColor = "white";
+});
+
+
+    document.getElementById("btn-back").addEventListener("click", function(event) {
+      let confirmation = confirm("Are you sure you want to go back?");
+      
+      if (confirmation) {
+        window.location.href = 'index.html';
+      }
+    });
