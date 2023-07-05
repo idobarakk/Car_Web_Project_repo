@@ -78,7 +78,7 @@ document.getElementById("btn-submit").addEventListener("click",function(event){
 		alert("the car was add sucssesfuly!");
         localStorage.setItem("addedCar", addedCar);
         window.location.href = "checkCar.html";
-        document.getElementById("CheckNum").value = localStorage.getItem("addedCar");
+        
 	}
 
 
