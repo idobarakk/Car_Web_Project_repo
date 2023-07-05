@@ -24,7 +24,7 @@ if ($conn->query($sql)==false){
     echo "can not submit the data. Error is: ".$conn->error;
 }
 else
-echo "the data was submitted"
+header('Location: https://idobk.mtacloud.co.il/index.html');
 ?>
 
 
